@@ -94,19 +94,16 @@
     })();
 </script>
 
-<meta name="description" content="three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示功能。Three.js 是一款运行在浏览器中的 3D 引擎，你可以用它创建各种三维场景，包括了摄影机、光影、材质等各种对象。下载地址 :  http://threejs.org/ 
-####首先创建一个 HTML 文件 , 引入 three.js 引擎包1234567891011121314151617&amp;lt;!">
+<meta name="description" content="three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示功能。Three.js 是一款运行在浏览器中的 3D 引擎，你可以用它创建各种三维场景，包括了摄影机、光影、材质等各种对象。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Three.js入门(二)——画星空">
 <meta property="og:url" content="http://yoursite.com/2016/12/19/threeJS2/index.html">
 <meta property="og:site_name" content="Error ' Blog">
-<meta property="og:description" content="three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示功能。Three.js 是一款运行在浏览器中的 3D 引擎，你可以用它创建各种三维场景，包括了摄影机、光影、材质等各种对象。下载地址 :  http://threejs.org/ 
-####首先创建一个 HTML 文件 , 引入 three.js 引擎包1234567891011121314151617&amp;lt;!">
-<meta property="og:updated_time" content="2016-12-19T02:37:59.158Z">
+<meta property="og:description" content="three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示功能。Three.js 是一款运行在浏览器中的 3D 引擎，你可以用它创建各种三维场景，包括了摄影机、光影、材质等各种对象。">
+<meta property="og:updated_time" content="2016-12-30T09:38:46.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Three.js入门(二)——画星空">
-<meta name="twitter:description" content="three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示功能。Three.js 是一款运行在浏览器中的 3D 引擎，你可以用它创建各种三维场景，包括了摄影机、光影、材质等各种对象。下载地址 :  http://threejs.org/ 
-####首先创建一个 HTML 文件 , 引入 three.js 引擎包1234567891011121314151617&amp;lt;!">
+<meta name="twitter:description" content="three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示功能。Three.js 是一款运行在浏览器中的 3D 引擎，你可以用它创建各种三维场景，包括了摄影机、光影、材质等各种对象。">
 
 
 
@@ -306,6 +303,10 @@
           
 
           
+              <div class="post-description">
+                  three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示功能。Three.js 是一款运行在浏览器中的 3D 引擎，你可以用它创建各种三维场景，包括了摄影机、光影、材质等各种对象。
+              </div>
+          
 
         </div>
       </header>
@@ -318,7 +319,7 @@
       
 
       
-        <p>three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示功能。Three.js 是一款运行在浏览器中的 3D 引擎，你可以用它创建各种三维场景，包括了摄影机、光影、材质等各种对象。<br>下载地址 :  <a href="http://threejs.org/" target="_blank" rel="external">http://threejs.org/ </a></p>
+        <p>下载地址 :  <a href="http://threejs.org/" target="_blank" rel="external">http://threejs.org/ </a></p>
 <p>####首先创建一个 HTML 文件 , 引入 three.js 引擎包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE HTML&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;title&gt;Three.js实现3D空间粒子效果&lt;/title&gt;</div><div class="line">    &lt;style type=&quot;text/css&quot;&gt;</div><div class="line">    body &#123;</div><div class="line">        background-color: #000000;</div><div class="line">        margin: 0px;</div><div class="line">        overflow: hidden;</div><div class="line">    &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">    &lt;script src=&quot;scripts/three.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt; </div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
 <p>####变量<br>定义全局变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// the main three.js components</div><div class="line"> var camera, scene, renderer, </div><div class="line">// to keep track of the mouse position </div><div class="line"> mouseX = 0, mouseY = 0,  </div><div class="line">// an array to store our particles in</div><div class="line"> particles = [];  </div><div class="line">// let&apos;s get going! </div><div class="line"> init();</div></pre></td></tr></table></figure></p>
 <p>#####初始化three.js<br>为了使用three.js，我们需要在init()函数中设置三个主要的对象：<br>1.scene(场景): 场景中包含了所有的3D对象数据<br>2.camera(相机): 相机有位置（position）,旋转（rotation）和视野属性（field of view）<br>3.renderer(渲染器): 决定场景中的一个物体在照相机的视角看来是什么样子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function init() &#123; </div><div class="line">	// 照相机参数 </div><div class="line">	camera = new THREE.PerspectiveCamera(80, window.innerWidth/window.innerHeight, 1, 4000); </div><div class="line">	// 将相机向后（即屏幕外）移 </div><div class="line">	camera.position.z = 1000;</div></pre></td></tr></table></figure></p>
